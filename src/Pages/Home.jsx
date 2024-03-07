@@ -17,8 +17,9 @@ import insure2 from '../assets/insure2.jpg'
 import dashboardhome from '../assets/dashboardhome.png'
 import startupOwner from '../assets/startup-owner.jpg'
 import dashboardcert from '../assets/dashboardcert.jpg'
-
-
+import techcrunchlogo from '../assets/techcrunchlogo.png'
+import reuters from '../assets/reuters.png'
+import business from '../assets/business.png'
 export const Home = () => {
   const lists = [
     ['Item 1', 'Item 2', 'Item 3'],
@@ -26,7 +27,7 @@ export const Home = () => {
     ['Item 7', 'Item 8', 'Item 9'],
   ];
   return (
-    <div className="container-fluid">
+    <div className="container-fluid mt-5">
       <Row className="align-items-center">
         {/* Tooltip side */}
         <Col xs={12} md={6}>
@@ -73,21 +74,21 @@ export const Home = () => {
       {/* next row side */}
       <Row className="align-items-center">
         <div className='text-center text-md-center mt-5 mt-md-5' style={{ fontWeight: 'bolder', fontSize: '20px', color: 'black' }}>In the Press</div>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center mt-5">
           <Col xs={2} className="text-center">
-            <Image src={img1} fluid />
+            <Image src={business} fluid  width={120}/>
           </Col>
           <Col xs={2} className="text-center">
-            <Image src={img2} fluid />
+            <Image src={techcrunchlogo} fluid width={120}/>
           </Col>
           <Col xs={2} className="text-center">
-            <Image src={img1} fluid />
+            <Image src={img2} fluid width={120}/>
           </Col>
           <Col xs={2} className="text-center">
-            <Image src={img2} fluid />
+            <Image src={reuters} fluid  width={120}/>
           </Col>
           <Col xs={2} className="text-center">
-            <Image src={img1} fluid />
+            <Image src={img1} fluid  width={120}/>
           </Col>
         </Row>
       </Row>
@@ -226,13 +227,13 @@ export const Home = () => {
 
 
 
-        <Col xs={12} sm={6} md={7} className="text-center mb-4">
-          <Image src={insure2} fluid />
+        <Col xs={12} sm={6} md={6} className="text-center mb-4">
+          <Image src={insure2} fluid width={400}/>
 
         </Col>
 
 
-        <Col xs={12} sm={6} md={4} className=" mb-4">
+        <Col xs={12} sm={6} md={6} className=" mb-4">
           <p style={{ color: '#0ed087', fontSize: '35px', fontWeight: 'bold' }}>E-Commerce merchant</p>
           <p className='fs-5'>Selling online is hard enough without having to think about what else can go wrong.</p>
           <div>
