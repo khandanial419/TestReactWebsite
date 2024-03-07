@@ -1,0 +1,18 @@
+/* Custom CSS for dropdown items on hover */
+.custom-dropdown .nav-link:hover,
+.custom-dropdown .dropdown-item:hover {
+  background-color:#fff; 
+  color: #0ed087; 
+}
+.bgTool
+{
+    background-color:#0ed087; 
+  color:#000 ; 
+  font-size: 13px;
+  justify-content: center;
+  gap: 2px;
+}
+.bgTool:hover
+{
+    cursor: pointer;
+}
