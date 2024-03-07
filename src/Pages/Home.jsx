@@ -93,7 +93,7 @@ export const Home = () => {
       </Row>
 
       <Row className="align-items-center">
-        <div className='text-center text-md-center mt-5 mt-md-5' style={{ fontWeight: 'bolder', fontSize: '50px', color: 'black' }}>3 Simple steps to<span style={{ color: '#0ed087' }}> instant </span>coverage</div>
+        <div className='text-center text-md-center mt-5 mt-md-5' style={{ fontWeight: 'bolder', fontSize: '30px', color: 'black' }}>3 Simple steps to<span style={{ color: '#0ed087' }}> instant </span>coverage</div>
         <div className='text-center text-md-center' style={{ fontWeight: 'lighter', fontSize: '20px', color: 'black' }}>Fast, easy, and reliable coverage that reaches businesses where they are, when they need it</div>
         <Row className="justify-content-center mt-4 mt-md-5">
           <Col xs={12} sm={6} md={4} className="text-center mb-4">
