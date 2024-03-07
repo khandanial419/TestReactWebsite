@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState}from 'react';
 import { Row, Col, Button, Tooltip, OverlayTrigger, Image, Carousel } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import { FaArrowRight } from "react-icons/fa";
@@ -20,12 +20,36 @@ import dashboardcert from '../assets/dashboardcert.jpg'
 import techcrunchlogo from '../assets/techcrunchlogo.png'
 import reuters from '../assets/reuters.png'
 import business from '../assets/business.png'
+import sbs from '../assets/sb5.jpg'
+import sbe from '../assets/sb1.jpg'
+import sbf from '../assets/sb4.jpg'
 export const Home = () => {
   const lists = [
     ['Item 1', 'Item 2', 'Item 3'],
     ['Item 4', 'Item 5', 'Item 6'],
     ['Item 7', 'Item 8', 'Item 9'],
   ];
+  const allImages = [
+    business,
+    reuters,
+    techcrunchlogo,
+    business,
+    reuters,
+    techcrunchlogo,
+    business,
+    reuters,
+  ];
+  
+  const [showAllImages, setShowAllImages] = useState(false);
+  const handleMouseEnter = (event) => {
+    event.target.style.opacity = '0.8';
+    event.target.style.transform = 'scale(1.1)';
+  };
+
+  const handleMouseLeave = (event) => {
+    event.target.style.opacity = '1';
+    event.target.style.transform = 'scale(1)';
+  };
   return (
     <div className="container-fluid mt-5">
       <Row className="align-items-center">
@@ -76,19 +100,19 @@ export const Home = () => {
         <div className='text-center text-md-center mt-5 mt-md-5' style={{ fontWeight: 'bolder', fontSize: '20px', color: 'black' }}>In the Press</div>
         <Row className="justify-content-center mt-5">
           <Col xs={2} className="text-center">
-            <Image src={business} fluid  width={120}/>
+            <Image src={business} fluid width={120} />
           </Col>
           <Col xs={2} className="text-center">
-            <Image src={techcrunchlogo} fluid width={120}/>
+            <Image src={techcrunchlogo} fluid width={120} />
           </Col>
           <Col xs={2} className="text-center">
-            <Image src={img2} fluid width={120}/>
+            <Image src={img2} fluid width={120} />
           </Col>
           <Col xs={2} className="text-center">
-            <Image src={reuters} fluid  width={120}/>
+            <Image src={reuters} fluid width={120} />
           </Col>
           <Col xs={2} className="text-center">
-            <Image src={img1} fluid  width={120}/>
+            <Image src={img1} fluid width={120} />
           </Col>
         </Row>
       </Row>
@@ -228,7 +252,7 @@ export const Home = () => {
 
 
         <Col xs={12} sm={6} md={6} className="text-center mb-4">
-          <Image src={insure2} fluid width={400}/>
+          <Image src={insure2} fluid width={400} />
 
         </Col>
 
@@ -257,6 +281,118 @@ export const Home = () => {
 
 
 
+        <Col xs={12} sm={6} md={10} className=" mb-4">
+          <div style={{ fontSize: '50px', fontWeight: 'bolder' }}>Explore our<span style={{ color: '#0ed087', fontSize: '50px' }}> business </span> insurance products</div>
+
+        </Col>
+
+      </Row>
+
+
+      <Row className="justify-content-center mt-4 mt-md-5">
+        {/* First Set */}
+        <Col xs={12} sm={4} className="mb-4 text-center">
+          <div style={{ fontSize: '25px', fontWeight: '400' }}>General Liability</div>
+          <Image src={sbe} fluid style={{ height: '200px', cursor: 'pointer', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+
+          />
+          <div className='mt-3'>
+            <Button variant="success">Start Now</Button>
+          </div>
+        </Col>
+
+        {/* Second Set */}
+        <Col xs={12} sm={4} className="mb-4 text-center">
+          <div style={{ fontSize: '25px', fontWeight: '400' }}>Business Owner's Policy</div>
+          <Image src={sbf} fluid style={{ height: '200px', cursor: 'pointer', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}
+
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          />
+          <div className='mt-3'>
+            <Button variant="success">Start Now</Button>
+          </div>
+        </Col>
+
+        {/* Third Set */}
+        <Col xs={12} sm={4} className="mb-4 text-center">
+          <div style={{ fontSize: '25px', fontWeight: '400' }}>Workers' Compensation</div>
+          <Image src={sbf} fluid style={{ height: '200px', cursor: 'pointer', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+
+          />
+
+          <div className='mt-3'>
+            <Button variant="success">Start Now</Button>
+          </div>
+        </Col>
+      </Row>
+
+      <Row className="justify-content-center mt-4 mt-md-5">
+        {/* First Set */}
+        <Col xs={12} sm={4} className="mb-4 text-center">
+          <div style={{ fontSize: '25px', fontWeight: '400' }}>Cyber</div>
+          <Image src={sbe} fluid style={{ height: '200px', cursor: 'pointer', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+
+          />
+          <div className='mt-3'>
+            <Button variant="success">Start Now</Button>
+          </div>
+        </Col>
+
+        {/* Second Set */}
+        <Col xs={12} sm={4} className="mb-4 text-center">
+          <div style={{ fontSize: '25px', fontWeight: '400' }}>Professional Liability</div>
+          <Image src={sbf} fluid style={{ height: '200px', cursor: 'pointer', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}
+
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          />
+          <div className='mt-3'>
+            <Button variant="success">Start Now</Button>
+          </div>
+        </Col>
+
+        {/* Third Set */}
+        <Col xs={12} sm={4} className="mb-4 text-center">
+          <div style={{ fontSize: '25px', fontWeight: '400' }}>Management Liability</div>
+          <Image src={sbf} fluid style={{ height: '200px', cursor: 'pointer', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+
+          />
+
+          <div className='mt-3'>
+            <Button variant="success">Start Now</Button>
+          </div>
+        </Col>
+      </Row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <Row className="justify-content-center mt-4 mt-md-5">
+
+
+
+
         <Col xs={12} sm={6} md={8} className="mb-4 text-center">
           <div className='fs-5' style={{ fontSize: '20px', fontWeight: 'bolder' }}><span style={{ color: '#0ed087' }}>Simplified</span> insurance experience</div>
           <p className='mt-2 fs-5'>Instant access to your own personalized customer dashboard to manage, monitor and control your insurance coverages</p>
@@ -271,15 +407,15 @@ export const Home = () => {
       <Row className="justify-content-center mt-4 mt-md-5">
 
         <Col xs={12} sm={6} md={7} className=" mb-4">
-          <div style={{ fontSize: '35px', fontWeight: 'bold' }}>Create a certificate of insurance<br/> (“COI”) in seconds</div>
+          <div style={{ fontSize: '35px', fontWeight: 'bold' }}>Create a certificate of insurance<br /> (“COI”) in seconds</div>
           <p className='fs-5'>Certificates of insurance protect small business owners and their partners before they begin working together. Has a client or business partner requested proof of business insurance coverage? You can instantaneously generate certificates of insurance for your business on your own or with the assistance of a Coverdash agent.</p>
           <div>
             <Button variant="success" size="lg">
               Get Started
             </Button>{' '}
-                     </div>
+          </div>
 
-          
+
 
         </Col>
 
@@ -289,7 +425,66 @@ export const Home = () => {
 
         </Col>
       </Row>
+        
 
+      <Row className="justify-content-center mt-4 mt-md-5 bg-dark">
+
+
+
+
+<Col xs={12} sm={6} md={12} className="mb-4 ">
+  <div className='mt-5' style={{fontSize:'30px',color:'white',textAlign:'center',alignItems:'center',justifyContent:'center',}}>Our carrier partners</div>
+                      
+</Col>
+
+
+
+
+<Carousel indicators={false} interval={2000} prevIcon={null} nextIcon={null} className="carousel-container">
+  {allImages.map((image, index) => (
+    <Carousel.Item key={index}>
+      <Row>
+        {(index === 0 ? allImages.slice(0, 4) : allImages.slice(4)).map((image, subIndex) => (
+          <Col key={subIndex} xs={6} md={3} className="mb-2">
+            <img
+              src={image}
+              alt={`Image ${index * 5 + subIndex + 1}`}
+              style={{ width: '50%', height: 'auto' }}
+            />
+          </Col>
+        ))}
+      </Row>
+    </Carousel.Item>
+  ))}
+</Carousel>
+
+
+
+</Row>
+
+
+
+<Row className="justify-content-center mt-5">
+
+
+
+
+<Col xs={12} sm={6} md={12} className="mb-4 ">
+<div style={{fontSize:'40px',fontWeight:'bolder',textAlign:'center'}}>
+Become an embedded<span style={{color:'#0ed087'}}> partner</span>
+</div>
+<p style={{fontSize:'20px',textAlign:'center'}}>Embed our insurance experience into your platform</p>
+                      
+</Col>
+
+
+
+
+
+
+
+
+</Row>
 
 
     </div>
